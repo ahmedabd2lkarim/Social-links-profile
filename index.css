@@ -1,0 +1,100 @@
+:root {
+    --bg-color-primary: hsl(0, 0%, 8%);
+    --bg-color-secondary: hsl(0, 0%, 12%);
+    --bg-color-third: hsl(0, 0%, 20%);
+    --bg-color-fourth: var(--color-on-text-secondary);
+    --color-on-text-primary: hsl(0, 0%, 100%);
+    --color-on-text-secondary: hsl(75, 94%, 57%);
+    --color-on-text-third: var(--bg-color-primary)
+}
+
+a,
+img,
+button {
+    user-select: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    font-family: "Inter";
+    background: var(--bg-color-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    margin: auto;
+    width: 100%;
+    max-width: 350px;
+    background: var(--bg-color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 18px;
+    border-radius: 10px;
+}
+
+
+.main__avatar {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.main__heading {
+    font-weight: 600;
+    margin-block: 20px 8px;
+    font-size: 20px;
+    color: var(--color-on-text-primary);
+}
+
+.main__address {
+    color: var(--color-on-text-secondary);
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+
+.main__bio {
+    color: var(--color-on-text-primary);
+    margin-block: 26px 20px;
+    opacity: .8;
+}
+
+.main__button {
+    user-select: none;
+    width: 96%;
+    border: none;
+    font-family: "Inter";
+    background: var(--bg-color-third);
+    border-radius: 5px;
+    color: var(--color-on-text-primary);
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: background-color .1s linear;
+
+    cursor: pointer;
+}
+
+.main__button:not(:last-of-type) {
+    margin-block-end: 12px;
+
+}
+
+.main__button:hover {
+    background: var(--bg-color-fourth);
+    color: var(--color-on-text-third);
+}
